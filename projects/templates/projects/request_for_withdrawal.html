@@ -1,0 +1,18 @@
+{% load inlinecss %}
+{% inlinecss "style.css" %}
+{% load humanize %}
+<html>
+    <body>
+        <div class="mail">
+            <p>Dear {{ req.project.author.first_name }}, </p>
+            <p>We are delighted to notify you that we have received your request for fund withdrawal for your project <strong>{{ req.project.title }}</strong>, which has received a total donation of <strong>NGN{{ req.project.total_donations|floatformat:"2"|intcomma }}</strong>.</p>
+            <p>We are currently working on your request and will get back to you within the next 24 hours.</p>
+            <p>Kindly ensure that your bank account details on your profile page are valid and bears your name as supplied to us to allow a seemless and quick processing of your fund.</p>  
+            <p>Should in case you have any reasons to contact us, kindly reach us on <strong>admin@kolabo.com.ng</strong> or on our mobile phone <strong>08023572852</strong>.</p>
+            <p>We are delighted to be a part of your journey to the fullfillment of your desires. We hope you have a rewarding and fulfilling experience with us. </p>
+            <p>Cheers....Steve</p>
+            <p>www.kolabo.com.ng</p>
+        </div>
+    </body>
+</html>
+{% endinlinecss %}

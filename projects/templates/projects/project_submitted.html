@@ -1,0 +1,18 @@
+{% load inlinecss %}
+{% inlinecss "style.css" %}
+<html>
+    <body>
+        <div class="mail">
+            <p>Dear {{ user.first_name }}, </p>
+            <p>We are excited to inform you that project titled <strong>{{ project.title }}</strong> has been submitted for review. Once reviewed and published on our site, your campaign will be visible to thousands of visitors who visit our site daily.</p>
+            <p>At Kolabo, every project is first reviewed to ascertain that they are birthed by genuine concerns before they are published on our platform. In a bid to ensure the originality of the purpose of the contents and the integrity of our platform, we may have to contact you through your phone number <strong>{{ user.phone_no }}</strong> or your email address <strong>{{ user.email }}</strong> if there necessary. This also help us to ascertain that our platform is not been exploited by fraudsters and bots.</p>
+            <p>Be assured that your project will be published and made visible on our site as soon as we are done verifying within the next couple of minutes/hours. </p>
+            <p>Kindly ensure that you supply your account details on your profile page so we can transfer the proceeds of your campaign to you at expiry or whenever payment is due.</p>  
+            <p>Just in case you have any reasons to contact us, kindly reach us on <strong>admin@kolabo.com.ng</strong> or on our mobile phone <strong>08023572852</strong>.</p>
+            <p>We are delighted to be a part of your journey to the fullfillment of your desires. We hope you have a rewarding and fulfilling experience with us. </p>
+            <p>Cheers....Steve</p>
+            <p>www.kolabo.com.ng</p>
+        </div>
+    </body>
+</html>
+{% endinlinecss %}

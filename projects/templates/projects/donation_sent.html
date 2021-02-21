@@ -1,0 +1,17 @@
+{% load inlinecss %}
+{% inlinecss "style.css" %}
+{% load humanize %}
+<html>
+    <body>
+        <div class="mail">
+            <p>Dear {{ donation.project.author.first_name }}, </p>
+            <p>We are delighted to notify you that your project <strong>{{ donation.project.title }}</strong> has received a donation of <strong>NGN{{ donation.amount|floatformat:"2"|intcomma }}</strong> from <strong>{{ donation.name.get_fullname }}</strong> today, {{ donation.date_donated }}.
+            <p>Kindly ensure that you supply your account details on your profile page so we can transfer the proceeds of your campaign to you when due.</p>  
+            <p>Should in case you have any reasons to contact us, kindly reach us on <strong>admin@kolabo.com.ng</strong> or on our mobile phone <strong>08023572852</strong>.</p>
+            <p>We are delighted to be a part of your journey to the fullfillment of your desires. We hope you have a rewarding and fulfilling experience with us. </p>
+            <p>Cheers....Steve</p>
+            <p>www.kolabo.com.ng</p>
+        </div>
+    </body>
+</html>
+{% endinlinecss %}

@@ -1,0 +1,17 @@
+{% load inlinecss %}
+{% inlinecss "style.css" %}
+{% load humanize %}
+<html>
+    <body>
+        <div class="mail">
+            <p>Dear {{ user.first_name }}, </p>
+            <p>We have received your donations of <strong>NGN{{ donation.amount|floatformat:"2"|intcomma }}</strong> IFO the project titled <strong>{{ project.title }}</strong> today, {{ donation.date_donated }}.</p> 
+            <p>On behalf of <strong>{{ project.author.first_name }}</strong> and ourselves at Kolabo, we want to show our deep appreciation for your kind gesture.</p>
+            <p>With people like you lending a hand and supporting the dreams of others, the world will be a better place.</p>
+            <p>Once again, thank you so much.</p>
+            <p>Cheers....Steve</p>
+            <p>www.kolabo.com.ng</p>
+        </div>
+    </body>
+</html>
+{% endinlinecss %}
