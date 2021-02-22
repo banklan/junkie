@@ -30,7 +30,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS=['https://kolabo.herokuapp.com/', 'localhost']
+ALLOWED_HOSTS = ['https://kolabo.herokuapp.com/', 'kolabo.herokuapp.com', 'kolabo.com.ng', 'localhost']
 
 
 # Application definition
