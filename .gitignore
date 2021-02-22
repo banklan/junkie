@@ -29,7 +29,9 @@ Lib
 *.pyc
 __pycache__
 db.sqlite3
-media
+
+# giving error so removed
+# media
 local_settings.py
 db.sqlite3-journal
 
@@ -126,5 +128,5 @@ venv.bak/
 .history
 
 #client
-node_modules
+# node_modules
 
