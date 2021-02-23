@@ -18,7 +18,7 @@ from decouple import config
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-FRONTEND_DIR = os.path.join(BASE_DIR, 'frontend')
+# FRONTEND_DIR = os.path.join(BASE_DIR, 'frontend')
 
 
 # Quick-start development settings - unsuitable for production
@@ -157,9 +157,9 @@ STATIC_URL = '/static/'
 ######################################################################
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "assets"),
+    # os.path.join(BASE_DIR, "assets"),
     # os.path.join(BASE_DIR, "frontend/dist"),
-    os.path.join(BASE_DIR, 'dist')
+    os.path.join(BASE_DIR, 'dist/static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
