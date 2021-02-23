@@ -159,7 +159,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     # os.path.join(BASE_DIR, "assets"),
     # os.path.join(BASE_DIR, "frontend/dist"),
-    os.path.join(BASE_DIR, 'dist/static')
+    os.path.join(BASE_DIR, 'dist')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
@@ -173,7 +173,7 @@ WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': DEBUG,
         'BUNDLE_DIR_NAME': '/bundles/',  # must end with slash
-        'STATS_FILE': os.path.join('webpack-stats.json'),
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
     }
 }
 
