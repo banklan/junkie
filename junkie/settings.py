@@ -183,7 +183,8 @@ WEBPACK_LOADER = {
 
 AUTH_USER_MODEL = 'profiles.CustomUser'
 
-CORS_ORIGIN_ALLOW_ALL =True
+# CORS_ORIGIN_ALLOW_ALL =True
+CORS_ORIGIN_ALLOW_ALL = False
 
 
 # Email settings
