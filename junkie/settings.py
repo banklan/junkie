@@ -20,6 +20,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # FRONTEND_DIR = os.path.join(BASE_DIR, 'frontend')
 
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -176,8 +178,11 @@ WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': DEBUG,
         # 'BUNDLE_DIR_NAME': '/bundles/',  # must end with slash
-        'BUNDLE_DIR_NAME': 'dist/',
-        'STATS_FILE': os.path.join(WEBPACK_CONFIG, 'webpack-stats.json'),
+        'BUNDLE_DIR_NAME': '/',
+        'STATS_FILE': os.path.join(PROJECT_ROOT, 'webpack-stats.json'),
+        "POLL_INTERVAL": 0.1,
+        "TIMEOUT": None,
+        "IGNORE": [".*\.hot-update.js", ".+\.map"]
     }
 }
 
