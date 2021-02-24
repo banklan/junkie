@@ -79,5 +79,5 @@ export default [
     {path: '/contact', name: 'ContactUs', component: ContactUs},
     {path: '/request-withdrawal/:id/:slug', name: 'RequestWithdrawal', component: RequestWithdrawal},
     {path: '/request-withdrawal-successful', name: 'WithdrawReqSuccess', component: WithdrawReqSuccess },
-    {path: '/*', name: 'Home', component: 'Home'}
+    {path: '*', name: 'Home', component: 'Home'}
 ]
