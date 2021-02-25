@@ -178,7 +178,7 @@ WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': DEBUG,
         # 'BUNDLE_DIR_NAME': '/bundles/',  # must end with slash
-        'BUNDLE_DIR_NAME': '/',
+        'BUNDLE_DIR_NAME': 'dist/',
         'STATS_FILE': os.path.join(PROJECT_ROOT, 'webpack-stats.json'),
         "POLL_INTERVAL": 0.1,
         "TIMEOUT": None,
