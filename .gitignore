@@ -126,7 +126,7 @@ venv.bak/
 !.vscode/launch.json
 !.vscode/extensions.json
 .history
-/migrations
+# /migrations
 #client
 # node_modules
 

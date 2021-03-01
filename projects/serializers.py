@@ -23,9 +23,9 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 ########################Generate Tokens for all existing users########################
-Users = get_user_model().objects.all()
-for user in Users:
-	Token.objects.get_or_create(user=user)
+# Users = get_user_model().objects.all()
+# for user in Users:
+# 	Token.objects.get_or_create(user=user)
 
 
 
