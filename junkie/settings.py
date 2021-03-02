@@ -32,7 +32,7 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://kolabo.herokuapp.com/', 'kolabo.herokuapp.com', 'kolabo.com.ng', 'localhost']
 
