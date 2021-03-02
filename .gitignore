@@ -2,6 +2,9 @@
 node_modules
 /dist
 
+public/
+webpack-stats.json
+
 
 # local env files
 .env.local
