@@ -32,7 +32,7 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://kolabo.herokuapp.com/', 'kolabo.herokuapp.com', 'kolabo.com.ng', 'localhost']
 
@@ -76,9 +76,9 @@ REST_FRAMEWORK = {
 
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -159,13 +159,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 ######################################################################
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
     # os.path.join(BASE_DIR, "assets"),
     # os.path.join(BASE_DIR, "frontend/dist"),
     os.path.join(BASE_DIR, 'dist')
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # STATICFILES_STORAGE = 'whitenoise.storage.GzipManifestStaticFilesStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -179,8 +179,8 @@ WEBPACK_CONFIG = os.path.join(BASE_DIR, 'webpack_config')
 WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': DEBUG,
-        # 'BUNDLE_DIR_NAME': '/bundles/',  # must end with slash
-        'BUNDLE_DIR_NAME': 'dist/',
+        'BUNDLE_DIR_NAME': '/bundles/',  # must end with slash
+        # 'BUNDLE_DIR_NAME': 'dist/',
         'STATS_FILE': os.path.join(PROJECT_ROOT, 'webpack-stats.json'),
         "POLL_INTERVAL": 0.1,
         "TIMEOUT": None,
