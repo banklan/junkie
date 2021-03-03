@@ -157,14 +157,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 ######################################################################
-STATIC_ROOT = os.path.join(BASE_DIR, 'public')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "assets"),
+    # os.path.join(BASE_DIR, "assets"),
     os.path.join(BASE_DIR, "static"),
-    os.path.join(BASE_DIR, 'dist')
+    # os.path.join(BASE_DIR, 'dist')
 ]
 
 # STATICFILES_STORAGE = 'whitenoise.storage.GzipManifestStaticFilesStorage'
@@ -179,8 +179,8 @@ WEBPACK_CONFIG = os.path.join(BASE_DIR, 'webpack_config')
 WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': DEBUG,
-        # 'BUNDLE_DIR_NAME': '/bundles/',  # must end with slash
-        'BUNDLE_DIR_NAME': '',
+        'BUNDLE_DIR_NAME': 'bundles/',  # must end with slash
+        # 'BUNDLE_DIR_NAME': '',
         'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
         "POLL_INTERVAL": 0.1,
         "TIMEOUT": None,

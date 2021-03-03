@@ -2,10 +2,11 @@ const BundleTracker = require("webpack-bundle-tracker");
 
 module.exports = {
   // on Windows you might want to set publicPath: "http://127.0.0.1:8080/"
-  publicPath: "http://127.0.0.1:8080/",
+  // publicPath: "http://127.0.0.1:8080/",
   // outputDir: "./dist/",
-  // publicPath: '',
+  publicPath: process.env.NODE_ENV === 'production' ? './dist' : 'http: //localhost:8080',
   outputDir: "./dist/",
+  indexPath: './templates/index.html',
 
   chainWebpack: (config) => {
     config
@@ -31,10 +32,10 @@ module.exports = {
   },
 
   // uncomment before executing 'npm run build'
-  css: {
-      extract: {
-        filename: 'bundle.css',
-        chunkFilename: 'bundle.css',
-      },
-  }
+  // css: {
+  //     extract: {
+  //       filename: 'bundle.css',
+  //       chunkFilename: 'bundle.css',
+  //     },
+  // }
 };
