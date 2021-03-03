@@ -174,14 +174,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-WEBPACK_CONFIG = os.path.join(BASE_DIR, 'webpack_config')
+# WEBPACK_CONFIG = os.path.join(BASE_DIR, 'webpack_config')
 
 WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': DEBUG,
         'BUNDLE_DIR_NAME': 'bundles/',  # must end with slash
         # 'BUNDLE_DIR_NAME': '',
-        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+        # 'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+        'STATS_FILE': BASE_DIR / 'webpack-stats.json',
         "POLL_INTERVAL": 0.1,
         "TIMEOUT": None,
         "IGNORE": [".*\.hot-update.js", ".+\.map"]
