@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    {% render_bundle 'app' 'css' %}
+    <!-- {% render_bundle 'app' 'css' %} -->
     <title>Kolabok</title>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link
@@ -18,10 +18,11 @@
       <strong>We're sorry but frontend doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app">
-         <app></app>
+        <app></app>
      </div>
-    <!-- {% render_bundle 'app' %} -->
-    {% render_bundle 'app' 'js' %}
+    {% render_bundle 'app' %}
+    <!-- {% render_bundle 'app' 'js' %} -->
 <!-- built files will be auto injected -->
+     <h1>this is to see that this is exactly the template that was deployed from inside the django templated index.html</h1>
 </body>
 </html>
