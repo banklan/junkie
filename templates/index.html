@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     {% render_bundle 'app' 'css' %}
     <title>Kolabok</title>
-    <base href="/">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link
     href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Lato&family=Open+Sans:wght@300;400&family=Raleway:wght@300;600&family=Trebuchet:wght@300;600&family=Roboto:wght@300;400;500&family=Baloo+2&family=Baloo+Thambi+2&family=Source+Sans+Pro:wght@300;400&family=Comfortaa&family=Lora&family=Muli:wght@200;400&family=Roboto:100,300,400,500,700,900&display=swap"
@@ -21,7 +20,7 @@
     <div id="app">
          <app></app>
      </div>
-    <!-- {% render_bundle 'app' %} -->
+    {% render_bundle 'app' %}
     {% render_bundle 'app' 'js' %}
 <!-- built files will be auto injected -->
 </body>
