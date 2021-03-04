@@ -178,7 +178,7 @@ MEDIA_URL = '/media/'
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'CACHE': DEBUG,
+        'CACHE': not DEBUG,
         'BUNDLE_DIR_NAME': 'dist/',  # must end with slash
         # 'BUNDLE_DIR_NAME': '',
         # 'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),

@@ -7,6 +7,7 @@ module.exports = {
   publicPath: process.env.NODE_ENV === 'production' ? '' : 'http: //localhost:8080',
   outputDir: "./dist/",
   indexPath: './index.html',
+  // entry: './src/main.js',
 
   chainWebpack: (config) => {
     config

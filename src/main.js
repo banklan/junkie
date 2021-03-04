@@ -59,5 +59,5 @@ new Vue({
   },
   render: h => h(App),
   el: '#app',
-  template: '<app/>',
+  template: '<App/>',
 }).$mount('#app')
