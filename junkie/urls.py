@@ -30,7 +30,7 @@ router.register('project_list', ProjectListViewSet, basename="project-list")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name="index.html"),name="app"),
+    path('', TemplateView.as_view(template_name="index.html"), name="app"),
     # path('campaigns/', TemplateView.as_view(template_name="index.html"), name="app"),
     # path('campaign/<int:pk>/<slug:slug>/', TemplateView.as_view(template_name="index.html"), name="app"),
     # path('campaign_backers/<int:id>/<slug:slug>/', TemplateView.as_view(template_name="index.html"), name="app"),

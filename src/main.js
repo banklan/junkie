@@ -55,9 +55,9 @@ new Vue({
   router,
   store,
   components: {
-    VueGoodShare, App
+    VueGoodShare
   },
   render: h => h(App),
-  el: '#app',
-  template: '<App/>',
+  // el: '#app',
+  template: '<app/>',
 }).$mount('#app')
