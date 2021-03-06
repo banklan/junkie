@@ -9,6 +9,12 @@ module.exports = {
   indexPath: './index.html',
   // entry: './src/main.js',
 
+  configureWebpack:{
+      entry: {    
+          app: './src/main.js'
+      }
+  },
+
   chainWebpack: (config) => {
     config
       .plugin("BundleTracker")

@@ -157,14 +157,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 ######################################################################
-STATIC_ROOT = os.path.join(BASE_DIR, 'dist')
+STATIC_ROOT = os.path.join(BASE_DIR, 'public')
 
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets"),
     os.path.join(BASE_DIR, "static"),
-    # os.path.join(BASE_DIR, "staticfiles")
+    os.path.join(BASE_DIR, "dist")
 ]
 
 # STATICFILES_STORAGE = 'whitenoise.storage.GzipManifestStaticFilesStorage'
@@ -196,7 +196,7 @@ AUTH_USER_MODEL = 'profiles.CustomUser'
 SITE_ID = 1
 
 # CORS_ORIGIN_ALLOW_ALL =True
-CORS_ORIGIN_ALLOW_ALL =True
+CORS_ORIGIN_ALLOW_ALL =False
 
 
 # Email settings
