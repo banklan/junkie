@@ -6,15 +6,8 @@ module.exports = {
   // outputDir: "./dist/",
   publicPath: process.env.NODE_ENV === 'production' ? '' : 'http: //localhost:8080',
   outputDir: "./dist/",
-  indexPath: './index.html',
-  // entry: './src/main.js',
-
-  configureWebpack:{
-      entry: {    
-          app: './src/main.js'
-      }
-  },
-
+  indexPath: '../templates/index.html',
+  
   chainWebpack: (config) => {
     config
       .plugin("BundleTracker")
